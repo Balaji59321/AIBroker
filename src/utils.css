@@ -1,6 +1,11 @@
-
+/* flex based styles */
 .flex{
     display: flex;
+}
+
+.flexCol{
+    display: flex;
+    flex-direction: column;
 }
 
 .spaceBtw{
@@ -15,48 +20,90 @@
     align-items: center;
 }
 
-.alignCenterStart{
-    align-items: flex-start;
+.alignEnd{
+    align-items: flex-end;
 }
 
-.flexCol{
-    display: flex;
-    flex-direction: column;
+.alignCenterStart{
+    align-items: flex-start;
 }
 
 .gap5{
     gap: 5px
 }
+
 .gap10{
     gap: 10px
+}
+
+.gap15{
+    gap: 15px
+}
+/* font based styles */
+
+
+.fontSize9{
+    font-size: 9px;
 }
 
 .fontSize10{
     font-size: 10px;
 }
 
-.margin0{
-    margin: 0;
-}
-
-.textCaptialise{
-    text-transform: capitalize;
-}
-
-.margin20{
-    margin: 20px 0;
+.fontSize12{
+    font-size: 12px;
 }
 
 .fontSize20{
     font-size: 20px;
 }
 
-.fontSize9{
-    font-size: 9px;
+.fontWeight500{
+    font-weight: 500;
 }
 
 .fontWeight{
     font-weight: bold;
+}
+
+/* margin based styles */
+
+.margin0{
+    margin: 0;
+}
+
+.mrTop3{
+    margin-top: 3px;
+}
+
+.mgTop5{
+    margin-top: 5px;
+}
+
+.mrRight5{
+    margin-right: 5px;
+}
+
+.mrBottom5{
+    margin-bottom: 3px;
+}
+
+.mrRight10{
+    margin-right: 10px;
+}
+
+.mrTop10{
+    margin-top: 10px;
+}
+
+.margin20{
+    margin: 20px 0;
+}
+
+/* misc */
+
+.textCaptialise{
+    text-transform: capitalize;
 }
 
 .greyTag{
@@ -67,13 +114,19 @@
     margin-right: 10px;
 }
 
-.fontSize12{
-    font-size: 12px;
+.pdTop3{
+    padding-top: 3px;
 }
 
-.fontWeight500{
-    font-weight: 500;
+.textCenter{
+    text-align: center;
 }
+
+.crPointer{
+    cursor: pointer;
+}
+
+/* colors */
 
 .green{
     color: #068122;
@@ -83,25 +136,6 @@
     color: #000;
     margin: 0 20px;
 }
-
-.mrTop10{
-    margin-top: 10px;
-}
-
-.iconWidth30{
-    width: 30px !important;
-    height: 30px !important;
-}
-
-.iconWidth25{
-    width: 25px !important;
-    height: 25px !important;
-}
-
-.alignEnd{
-    align-items: flex-end;
-}
-
 
 .darkBlue{
     color: #308fe8;
@@ -115,42 +149,6 @@
     color: #dc3545;
 }
 
-.gap15{
-    gap: 15px
-}
-
-.mrRight10{
-    margin-right: 10px;
-}
-
-.mrRight5{
-    margin-right: 5px;
-}
-
-.mrTop3{
-    margin-top: 3px;
-}
-
-.mrBottom5{
-    margin-bottom: 3px;
-}
-
-.pdTop3{
-    padding-top: 3px;
-}
-
-.mgTop5{
-    margin-top: 5px;
-}
-
-.textCenter{
-    text-align: center;
-}
-
-.crPointer{
-    cursor: pointer;
-}
-
 .tokenColor{
     background-color: #6e8edb !important;
 }
@@ -158,4 +156,16 @@
 .blackTheme{
     background-color: #c2bfba !important;
     color: #222;
+}
+
+/* icons */
+
+.iconWidth25{
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.iconWidth30{
+    width: 30px !important;
+    height: 30px !important;
 }
