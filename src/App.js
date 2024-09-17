@@ -1,20 +1,31 @@
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import DashboardLayoutBasic from './components/NavBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Markets from './components/Markets';
+import { ThemeProvider } from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
+import { blackTheme, lightTheme } from './utils/utils';
 import './App.css';
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(false);
+  const toggleTheme = useCallback(() => {
+    setDarkTheme((prevTheme) => !prevTheme);
+  },[]);
+
   return (
+    <ThemeProvider theme={darkTheme ? blackTheme : lightTheme}>
+    <CssBaseline />
     <div className="App">
+      {/* Routing based components */}
       <BrowserRouter>
-        <DashboardLayoutBasic darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+        <DashboardLayoutBasic darkTheme={darkTheme} toggleTheme={toggleTheme} />
         <Routes>
-          <Route path="/" exact={true} element={<Markets />} />
+          <Route path="/" exact={true} element={<Markets isDarkTheme={darkTheme} />} />
         </Routes>
       </BrowserRouter>
     </div>
+    </ThemeProvider>
   );
 }
 

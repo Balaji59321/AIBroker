@@ -13,7 +13,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import './../App.css';
 import "./../utils.css";
 
-const Markets = () => {
+const Markets = ({isDarkTheme}) => {
     // dispatching data to store
     const dispatch = useDispatch();
     const {setData} = tokens.actionCreators;
@@ -34,7 +34,7 @@ const Markets = () => {
         tokenName: '',
         value: '',
         holdings: '',
-        sentiment: 'Fear',
+        sentiment: '',
         watchList: ''
     }
     const handleResetFilters = () => setFilter(defaultFilters)
@@ -82,19 +82,20 @@ const Markets = () => {
     const filterProps = {
         searchHandler,
         handleOpen,
-        handleOpenFilters
+        handleOpenFilters,
+        handleResetFilters
     }
 
     return (
     <div className={classes.marketContainer}>
         <SignUp />
         <Box className={`margin20 ${classes.topWidgets}`}>
-            {TopWigetsMapping.map(ele => <TopWidgets key={ele.title} title={ele.title} keys={ele.keys} subKey={ele.subKey} />)}
+            {TopWigetsMapping.map(ele => <TopWidgets key={ele.title} title={ele.title} keys={ele.keys} subKey={ele.subKey} isDarkTheme={isDarkTheme} />)}
         </Box>
         <h1 className="fontSize20 mrBottom5 fontWeight500">All Tokens</h1>
         <FilterSection {...filterProps} />
         <Box>
-            {filterSearchResults.map(data => (<TokenCardLayout key={data.id} tokenData={data} />))}
+            {filterSearchResults.map(data => (<TokenCardLayout key={data.id} tokenData={data} isDarkTheme={isDarkTheme} />))}
         </Box>
         <Modal
             open={open}
