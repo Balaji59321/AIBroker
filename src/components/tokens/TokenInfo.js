@@ -5,7 +5,7 @@ import { BorderLinearProgress } from '../../utils/utils';
 import "./../../utils.css";
 
 const TokenInfo = ({tokenData}) => {
-  const {name,details,currency} = tokenData;
+  const {name,details,currency,id} = tokenData;
   const {code,value,variationLevel,watchListCount,low,high} = details;
   
   return (
@@ -13,7 +13,7 @@ const TokenInfo = ({tokenData}) => {
       <div>
         <div className="flex spaceBtw alignCenter">
           <div className={classes.tokenName}>
-            <Avatar className='mrRight10 iconWidth30'>N</Avatar>
+            <Avatar className='mrRight5 iconWidth30 tokenColor'>{name[0]}</Avatar>
             <div className='mrRight5'>{name}</div>
             <span className='fontSize9 grey'>{code}</span>
           </div>
@@ -23,7 +23,7 @@ const TokenInfo = ({tokenData}) => {
           </div>
         </div>
         <div>
-          <span className='greyTag fontSize9'>Rank #1</span>
+          <span className='greyTag fontSize9'>Rank #{id}</span>
           <span className='greyTag fontSize9'>Coin</span>
           <span className='greyTag fontSize9'>On {watchListCount.toLocaleString()} watchlists</span>
           <span className='greyTag fontSize9'>24h</span>

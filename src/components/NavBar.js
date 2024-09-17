@@ -3,20 +3,15 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import LogoutIcon from '@mui/icons-material/Logout';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router-dom';
-import "./../utils.css";
 import classes from  "./NavBar.module.css";
 import UserInfo from '../mockApiData/UserDetails';
-import { FormControlLabel, styled, Switch } from '@mui/material';
+import { FormControlLabel} from '@mui/material';
 import { MaterialUISwitch } from '../utils/utils';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
@@ -31,6 +26,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
+import "./../utils.css";
 
 const NAVIGATION = [
   {
@@ -72,8 +68,7 @@ const NAVIGATION = [
 const drawerWidth = 210;
 
 function ResponsiveDrawer(props) {
-  const {window} = props;
-  const { darkTheme, setDarkTheme } = props;
+  const { window, darkTheme, toggleTheme } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -99,7 +94,7 @@ function ResponsiveDrawer(props) {
   const { name,balance,variation,currencyDen,profTier,verified } = UserDetails || {};
 
   const drawer = (
-    <div>
+    <>
       <div className={classes.pageLogo}>
         <img
           src="https://via.placeholder.com/100"
@@ -149,7 +144,7 @@ function ResponsiveDrawer(props) {
           <MonetizationOnIcon fontSize='small'/>
         </div>}
       </div>
-    </div>
+    </>
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
@@ -167,31 +162,22 @@ function ResponsiveDrawer(props) {
         }}
       >
         <div className={`flex spaceBtw alignCenter ${classes.padding10}`}>
-          {/* <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton> */}
-          <h5 className='margin0 fontSize20 fontWeight500' style={{color: "#111"}}>
+          <h5 className='margin0 fontSize20 fontWeight500 black'>
             Markets
           </h5>
           <div className='flex alignCenter gap15'>
-            <SearchIcon fontSize='medium' className='grey'/>
-            <EmailIcon fontSize='medium' className='grey'/>
-            <NotificationsIcon fontSize='medium' className='grey'/>
+            <SearchIcon fontSize='medium' className='grey crPointer'/>
+            <EmailIcon fontSize='medium' className='grey crPointer'/>
+            <NotificationsIcon fontSize='medium' className='grey crPointer'/>
             <span className='grey fontSize12'>EN/USD</span>
             <FormControlLabel
               control={<MaterialUISwitch checked={darkTheme} />}
               onChange={e => {
-                setDarkTheme(prev => !prev);
+                toggleTheme();
               }}
               className={classes.padding0}
             />
-            <LogoutIcon fontSize='medium' className='grey'/>
+            <LogoutIcon fontSize='medium' className='grey crPointer'/>
           </div>
         </div>
       </AppBar>
@@ -227,12 +213,6 @@ function ResponsiveDrawer(props) {
           {drawer}
         </Drawer>
       </Box>
-      {/* <Box
-        component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
-      >
-        <Toolbar />
-      </Box> */}
     </Box>
   );
 }

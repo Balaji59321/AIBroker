@@ -1,5 +1,5 @@
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
-import { styled, Switch } from '@mui/material';
+import { createTheme, styled, Switch } from '@mui/material';
 
 export const TopWigetsMapping = [
     {
@@ -23,6 +23,19 @@ export const TopWigetsMapping = [
         subKey: "lose"
     }
 ]
+
+
+export const lightTheme = createTheme({
+  palette: {
+    mode: 'light',
+  },
+});
+
+export const blackTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 export const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     height: 5,

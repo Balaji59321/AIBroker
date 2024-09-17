@@ -11,7 +11,7 @@ const VolumeInfo = ({tokenData}) => {
       <span className={classes.columnHeading}>Volume</span>
       <div className='flexCol spaceBtw gap15'>
         <div className='flexCol'>
-          <span className='fontWeight500'>{currency}{value}{currencyDen}</span>
+          <span className='fontWeight'>{currency}{value}{currencyDen}</span>
           <div>
             <span className='greyTag'>24h</span>
             <span className={`fontSize9 fontWeight ${parseInt(variationLevel) > 0 ? "green" : "red"}`}>{variationLevel}%</span>

@@ -81,13 +81,27 @@
     gap: 10px;
 }
 
+@media (min-width: 500px) and (max-width: 999px) {
+    .columnWidth{
+        width: 100%;
+    }
+
+    .cirColWidth{
+        width: 100%;
+    }
+
+    .sentimentCol{
+        width: 100%;
+    }
+}
+
 @media (min-width: 1000px) and (max-width: 1300px) {
     .columnWidth{
         width: 180px;
     }
 
     .columnHeading{
-        font-size: 10px;
+        font-size: 9px;
     }
 
     .sentimentCol{

@@ -22,46 +22,18 @@ const xLabels = [
 ];
 
 const Holders = ({tokenData}) => {
-  const {holders} = tokenData;
+  const {holders,statistics} = tokenData;
   const {amount,variation} = holders;
   return (
     <div className={classes.colTitle}>
       <span className={classes.columnHeading}>Holders</span>
       <div>
-        <h6 className='fontWeight500 margin0 pdTop2'>{amount.toLocaleString()}</h6>
+        <h6 className='fontWeight margin0'>{amount.toLocaleString()}</h6>
         <div className={`fontSize9 ${parseInt(variation) > 0 ? "green" : "red"}`}>{variation}%</div>
       </div>
-      {/* <ChartContainer
-        width={150}
-        height={150}
-        className={classes.customChartContainer}
-        series={[{ type: 'line', data: pData }]}
-        xAxis={[{ scaleType: 'point', data: xLabels }]}
-        sx={{
-          scale: 4.5,
-          // marginLeft: "-40px",
-          [`& .${lineElementClasses.root}`]: {
-            stroke: '#308fe8',
-            strokeWidth: 2,
-          },
-          [`& .${markElementClasses.root}`]: {
-            stroke: '#308fe8',
-            scale: '0.6',
-            fill: '#fff',
-            strokeWidth: 2,
-          },
-          [`& .${classes.customChartContainer}`]: {
-            padding: 0,
-            margin: 0,
-          },
-        }}
-        disableAxisListener
-      >
-        <LinePlot />
-      </ChartContainer> */}
-      <LineChart/>
+      <LineChart chartData={statistics}/>
     </div>
   )
 }
 
-export default Holders
+export default Holders;

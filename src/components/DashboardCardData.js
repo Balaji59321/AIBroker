@@ -7,8 +7,8 @@ const DashboardCardData = ({data,subKey}) => {
   const {variation} = data;
   return (
         <div className='flex spaceBtw' style={{height: "35px"}}>
-            <div className='flex alignCenter gap10'>
-                <SocialIcon url={data.icon} fgColor="#fff" className={classes.iconWidth25}/>
+            <div className='flex alignCenterStart gap10'>
+                <SocialIcon url={data.icon} fgColor="#fff" className={classes.iconWidth25} style={{width: 25,height: 25}}/>
                 <div className='flexCol'>
                     <div className='mrRight5 fontSize10'>{data.name}</div>
                     <span className='fontSize9 grey'>{data.code}</span>

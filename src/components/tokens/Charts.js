@@ -10,13 +10,13 @@ import {
 
 ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement);
 
-const LineChart = () => {
+const LineChart = ({chartData}) => {
   const data = {
     labels: ['', '', '', '', '', '', ''], // Empty labels for a minimal look
     datasets: [
       {
         label: 'Line Chart',
-        data: [2, 3, 1.5, 3.2, 2.8, 4.5, 3.9], // Example data points
+        data: chartData, // Example data points
         fill: true,
         borderColor: '#007bff', // Line color (blue)
         backgroundColor: 'rgba(0, 223, 255, 0.1)', // Light blue fill below the line

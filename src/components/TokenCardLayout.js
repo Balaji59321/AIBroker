@@ -12,10 +12,10 @@ import Sentiment from './tokens/Sentiment';
 import classes from "./TokenCardLayout.module.css"
 import Columns from '../mockApiData/Columns';
 
-const TokenCardLayout = ({tokenData}) => {
+const TokenCardLayout = ({tokenData,isDarkTheme}) => {
   const selectedColumns = JSON.parse(localStorage.getItem('columns')) || Columns.map(ele => ele.id);
   return (
-    <Box className={classes.cardLayout}>
+    <Box className={`${classes.cardLayout} ${isDarkTheme && "blackTheme"}`}>
       <div className={classes.startCol}>
         <GradeOutlinedIcon className={classes.darkBlue} fontSize='small' />
         <TextSnippetOutlinedIcon className={classes.darkBlue} fontSize='small'/>

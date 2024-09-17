@@ -5,9 +5,9 @@ import OfflineBoltRoundedIcon from '@mui/icons-material/OfflineBoltRounded';
 import classes from "./TopWidgets.module.css";
 import "./../utils.css";
 
-const TopWidgets = ({title, keys, subKey}) => {
+const TopWidgets = ({title, keys, subKey, isDarkTheme}) => {
   return (
-    <div className={classes.cardWhite}>
+    <div className={`${classes.cardWhite} ${isDarkTheme && "blackTheme"}`}>
       <div className={classes.heading}>
         <OfflineBoltRoundedIcon className={classes.wigetIcon} />
         <h1 className={classes.title}>{title}</h1>

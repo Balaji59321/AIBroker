@@ -15,6 +15,10 @@
     align-items: center;
 }
 
+.alignCenterStart{
+    align-items: flex-start;
+}
+
 .flexCol{
     display: flex;
     flex-direction: column;
@@ -75,6 +79,11 @@
     color: #068122;
 }
 
+.black{
+    color: #000;
+    margin: 0 20px;
+}
+
 .mrTop10{
     margin-top: 10px;
 }
@@ -118,22 +127,35 @@
     margin-right: 5px;
 }
 
-.mrTop7{
-    margin-top: 7px;
-}
-
 .mrTop3{
-    margin-top: -3px;
+    margin-top: 3px;
 }
 
 .mrBottom5{
     margin-bottom: 3px;
 }
 
-.pdTop2{
+.pdTop3{
     padding-top: 3px;
+}
+
+.mgTop5{
+    margin-top: 5px;
 }
 
 .textCenter{
     text-align: center;
+}
+
+.crPointer{
+    cursor: pointer;
+}
+
+.tokenColor{
+    background-color: #6e8edb !important;
+}
+
+.blackTheme{
+    background-color: #c2bfba !important;
+    color: #222;
 }

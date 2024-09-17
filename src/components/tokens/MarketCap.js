@@ -12,7 +12,7 @@ const MarketCap = ({tokenData}) => {
       <span className={classes.columnHeading}>MarketCap</span>
       <div className='flexCol spaceBtw gap15'>
         <div className='flexCol'>
-          <span className='fontWeight500'>{currency}{Cap}{CapCurrency}</span>
+          <span className='fontWeight'>{currency}{Cap}{CapCurrency}</span>
           <div>
             <span className='greyTag'>24h</span>
             <span className={`fontSize9 fontWeight ${parseInt(variationLevel) > 0 ? "green" : "red"}`}>{variationLevel}%</span>

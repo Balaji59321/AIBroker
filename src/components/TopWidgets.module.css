@@ -38,6 +38,13 @@
     height: 25px !important;
 }
 
+@media (min-width: 500px) and (max-width: 999px) {
+    .cardWhite{
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
 @media (min-width: 1000px) and (max-width: 1300px) {
     .cardWhite{
         height: 300px;
