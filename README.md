@@ -4,6 +4,9 @@ This page is very useful for those who watch cryptos as all the tokens along wit
 
 ### `Features Added`
 
-User can Toggle black and white theme depending upon their choice
-Search along with filters has been added
+### Columns can be customised according to user needs
+
+### Search along with filters has been added
+
+### User can Toggle black and white theme depending upon their choice
 
