@@ -1,0 +1,102 @@
+
+.columnWidth {
+    width: 280px;
+}
+
+.columnHeading{
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.tokenName{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.footerHead{
+    display: flex;
+    align-items: center;
+    color: #6c757d;
+    font-weight: 500;
+    font-size: 9px;
+    margin: 0;
+}
+
+.footerHeadVal{
+    font-weight: bold;
+    color: #000;
+    font-size: 11px;
+}
+
+.cirColWidth{
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.colTitle{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.circVal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.progressChart{
+    width: 150px;
+    padding: 0 5px;
+}
+
+.barRangeText{
+    color: #000;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.sentimentCol{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    width: 130px;  
+}
+
+.customChartContainer {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.socialInfo{
+    width: 101px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+    .columnWidth{
+        width: 180px;
+    }
+
+    .columnHeading{
+        font-size: 10px;
+    }
+
+    .sentimentCol{
+        width: 100px;
+    }
+}
+
+@media (min-width: 1301px) and (max-width: 1595px) {
+    .columnHeading{
+        font-size: 9px;
+    }
+}

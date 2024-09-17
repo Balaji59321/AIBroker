@@ -1,0 +1,139 @@
+
+.flex{
+    display: flex;
+}
+
+.spaceBtw{
+    justify-content: space-between;
+}
+
+.jusCenter{
+    justify-content: center;
+}
+
+.alignCenter{
+    align-items: center;
+}
+
+.flexCol{
+    display: flex;
+    flex-direction: column;
+}
+
+.gap5{
+    gap: 5px
+}
+.gap10{
+    gap: 10px
+}
+
+.fontSize10{
+    font-size: 10px;
+}
+
+.margin0{
+    margin: 0;
+}
+
+.textCaptialise{
+    text-transform: capitalize;
+}
+
+.margin20{
+    margin: 20px 0;
+}
+
+.fontSize20{
+    font-size: 20px;
+}
+
+.fontSize9{
+    font-size: 9px;
+}
+
+.fontWeight{
+    font-weight: bold;
+}
+
+.greyTag{
+    background-color: #e1eefe;
+    color: #292929;
+    font-size: 9px;
+    padding: 1px 4px;
+    margin-right: 10px;
+}
+
+.fontSize12{
+    font-size: 12px;
+}
+
+.fontWeight500{
+    font-weight: 500;
+}
+
+.green{
+    color: #068122;
+}
+
+.mrTop10{
+    margin-top: 10px;
+}
+
+.iconWidth30{
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.iconWidth25{
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.alignEnd{
+    align-items: flex-end;
+}
+
+
+.darkBlue{
+    color: #308fe8;
+}   
+
+.grey{
+    color: #6c757d !important;
+}
+
+.red{
+    color: #dc3545;
+}
+
+.gap15{
+    gap: 15px
+}
+
+.mrRight10{
+    margin-right: 10px;
+}
+
+.mrRight5{
+    margin-right: 5px;
+}
+
+.mrTop7{
+    margin-top: 7px;
+}
+
+.mrTop3{
+    margin-top: -3px;
+}
+
+.mrBottom5{
+    margin-bottom: 3px;
+}
+
+.pdTop2{
+    padding-top: 3px;
+}
+
+.textCenter{
+    text-align: center;
+}

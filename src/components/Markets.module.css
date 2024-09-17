@@ -1,0 +1,50 @@
+
+.marketContainer{
+    width: calc(100% - 210px);
+    float: right;
+    margin-top: 80px;
+    padding: 0 25px;
+}
+
+.modalStyle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #ddd;
+    border: 2px solid #bbb;
+    padding: 16px;
+    border-radius: 5px;
+}
+
+.topWidgets{
+    display: flex;
+    gap: 25px;
+    justify-content: space-evenly;
+}
+
+.filtersAlign{
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.searchWidth{
+    width: 20vw;
+}
+
+.iconBrColor{
+    border-color: grey !important;
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+    .topWidgets{
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .topWidgets{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,14 @@
+
+.container{
+    background-image: linear-gradient(to right, #c5e9f1, #95c4fc, #5daafa);
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.btnText{
+    margin-right: 10px;
+}
+
+.btnIcon{
+    font-size: 14px !important;
+}
