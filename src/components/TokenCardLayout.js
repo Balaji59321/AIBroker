@@ -14,22 +14,29 @@ import Columns from '../mockApiData/Columns';
 
 const TokenCardLayout = ({tokenData,isDarkTheme}) => {
   const selectedColumns = JSON.parse(localStorage.getItem('columns')) || Columns.map(ele => ele.id);
+  const componentMap = {
+    1: TokenInfo,
+    2: MarketCap,
+    3: VolumeInfo,
+    4: CirculatingSupply,
+    5: (props) => <SocialInfo {...props} title="Social Following" />,
+    6: (props) => <SocialInfo {...props} title="Social Interactions" />,
+    7: Holders,
+    8: Sentiment,
+  };
+  
   return (
-    <Box className={`${classes.cardLayout} ${isDarkTheme && "blackTheme"}`}>
-      <div className={classes.startCol}>
-        <GradeOutlinedIcon className={classes.darkBlue} fontSize='small' />
-        <TextSnippetOutlinedIcon className={classes.darkBlue} fontSize='small'/>
-      </div>
-      {selectedColumns.includes(1) && <TokenInfo tokenData={tokenData}/>}
-      {selectedColumns.includes(2) && <MarketCap tokenData={tokenData} />}
-      {selectedColumns.includes(3) && <VolumeInfo tokenData={tokenData} />}
-      {selectedColumns.includes(4) && <CirculatingSupply tokenData={tokenData}/>}
-      {selectedColumns.includes(5) && <SocialInfo tokenData={tokenData} title={"Social Following"} />}
-      {selectedColumns.includes(6) && <SocialInfo tokenData={tokenData} title={"Social Interactions"} />}
-      {selectedColumns.includes(7) && <Holders tokenData={tokenData} />}
-      {selectedColumns.includes(8) && <Sentiment tokenData={tokenData}/>}
-    </Box>
-  )
-}
+      <Box className={`${classes.cardLayout} ${isDarkTheme && "blackTheme"}`}>
+        <div className={classes.startCol}>
+          <GradeOutlinedIcon className={classes.darkBlue} fontSize='small' />
+          <TextSnippetOutlinedIcon className={classes.darkBlue} fontSize='small'/>
+        </div>
+        {selectedColumns.map((column) => {
+          const Component = componentMap[column];
+          return Component ? <Component key={column} tokenData={tokenData} /> : null;
+        })}
+      </Box>
+    );
+  };
 
 export default TokenCardLayout;
