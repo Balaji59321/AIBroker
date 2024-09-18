@@ -1,4 +1,3 @@
-import tokenData from "../mockApiData/AllTokensData";
 const mountPoint = "Token";
 const SET_DATA = 'SET_DATA';
 

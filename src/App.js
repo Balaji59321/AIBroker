@@ -1,9 +1,9 @@
 import React, {useCallback, useState} from 'react';
-import DashboardLayoutBasic from './components/NavBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Markets from './components/Markets';
 import { ThemeProvider } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
+import DashboardLayoutBasic from './components/NavBar';
+import Markets from './components/Markets';
 import { blackTheme, lightTheme } from './utils/utils';
 import './App.css';
 

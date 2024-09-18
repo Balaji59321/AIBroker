@@ -1,7 +1,7 @@
 import React from 'react';
+import OfflineBoltRoundedIcon from '@mui/icons-material/OfflineBoltRounded';
 import dashboardData from './../mockApiData/Markets';
 import DashboardCardData from './DashboardCardData';
-import OfflineBoltRoundedIcon from '@mui/icons-material/OfflineBoltRounded';
 import classes from "./TopWidgets.module.css";
 import "./../utils.css";
 
