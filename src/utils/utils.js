@@ -24,7 +24,6 @@ export const TopWigetsMapping = [
     }
 ]
 
-
 export const lightTheme = createTheme({
   palette: {
     mode: 'light',

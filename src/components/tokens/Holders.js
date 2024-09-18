@@ -1,25 +1,7 @@
 import React from 'react'
-import { ChartContainer } from '@mui/x-charts/ChartContainer';
-import {
-  LinePlot,
-  lineElementClasses,
-  markElementClasses,
-} from '@mui/x-charts/LineChart';
 import classes from  "./Token.module.css";
 import "./../../utils.css";
 import LineChart from './Charts';
-
-const pData = [2400, 1398, 4800, 3908, 4800, 3800, 4300, 4100];
-const xLabels = [
-  'Page A',
-  'Page B',
-  'Page C',
-  'Page D',
-  'Page E',
-  'Page F',
-  'Page G',
-  'Page H',
-];
 
 const Holders = ({tokenData}) => {
   const {holders,statistics} = tokenData;

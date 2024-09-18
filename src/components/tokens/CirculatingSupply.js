@@ -1,7 +1,8 @@
 import React from 'react';
+import { BorderLinearProgress } from '../../utils/utils';
 import "./../../utils.css";
 import classes from "./Token.module.css";
-import { BorderLinearProgress } from '../../utils/utils';
+
 
 const CirculatingSupply = ({tokenData}) => {
   const {ciruculatingSupply, details} = tokenData || {};
